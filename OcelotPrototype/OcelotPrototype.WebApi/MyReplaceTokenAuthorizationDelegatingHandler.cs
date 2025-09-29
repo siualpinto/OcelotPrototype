@@ -5,14 +5,12 @@ namespace OcelotPrototype.WebApi
     public class MyReplaceTokenAuthorizationDelegatingHandler : DelegatingHandler
     {
         private readonly ILogger<MyReplaceTokenAuthorizationDelegatingHandler> _logger;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public MyReplaceTokenAuthorizationDelegatingHandler(
             ILogger<MyReplaceTokenAuthorizationDelegatingHandler> logger,
             IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
-            _httpContextAccessor = httpContextAccessor;
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(

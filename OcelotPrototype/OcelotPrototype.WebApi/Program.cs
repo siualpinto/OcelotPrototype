@@ -1,4 +1,3 @@
-using MMLib.SwaggerForOcelot.DependencyInjection;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -60,17 +59,9 @@ namespace OcelotPrototype.WebApi
 
         private static void AddOcelotConfigurationFiles(WebApplicationBuilder builder)
         {
-            string ocelotConfigurationsFolder = OcelotConstants.OCELOT_CONFIGURATIONS_FOLDER;
-            if (builder.Environment.IsDevelopment())
-            {
-                ocelotConfigurationsFolder = OcelotConstants.OCELOT_DEBUG_CONFIGURATIONS_FOLDER;
-            }
             builder.Configuration
-                .AddOcelotWithSwaggerSupport(opt =>
-                {
-                    opt.Folder = ocelotConfigurationsFolder;
-                    opt.FileOfSwaggerEndPoints = OcelotConstants.OCELOT_SWAGGER_FILE;
-                });
+                .SetBasePath(builder.Environment.ContentRootPath)
+                .AddOcelot();
         }
 
     }
