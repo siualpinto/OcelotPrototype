@@ -35,6 +35,7 @@ namespace OcelotPrototype.WebApi
                     AccessToken = "123"
                 };
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", tokenResult.AccessToken);
+                request.Headers.TryAddWithoutValidation("X-TestHeader", "TestValue");
                 _logger.LogInformation($"New Token: {request.Headers.Authorization}");
             }
         }
