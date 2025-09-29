@@ -29,12 +29,7 @@ namespace OcelotPrototype.WebApi
             string? originalToken = authHeaderValue.Parameter;
             if (!string.IsNullOrWhiteSpace(originalToken))
             {
-
-                TokenResult tokenResult = new TokenResult
-                {
-                    AccessToken = "123"
-                };
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", tokenResult.AccessToken);
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", "123");
                 request.Headers.TryAddWithoutValidation("X-TestHeader", "TestValue");
                 _logger.LogInformation($"New Token: {request.Headers.Authorization}");
             }
