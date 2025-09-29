@@ -1,0 +1,15 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "sample",
+      "RemoveUnusedComponentsFromScheme": false,
+      "Config": [
+        {
+          "Name": "Sample API",
+          "Version": "v1",
+          "Url": "https://localhost:5001/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/pharmacywebgateway/sample/api/{everything}",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 58335
+        }
+      ],
+      "SwaggerKey": "sample",
+      "UpstreamHeaderTransform": {
+        "Uncle": "Bob"
+      }     
+    }
+  ]
+}
