@@ -19,20 +19,15 @@ namespace OcelotPrototype.WebApi
            HttpRequestMessage request,
            CancellationToken cancellationToken)
         {
-            RedirectToAuthorizationApi(request);
+            AddHeaders(request);
             return await base.SendAsync(request, cancellationToken);
         }
 
-        private void RedirectToAuthorizationApi(HttpRequestMessage request)
+        private void AddHeaders(HttpRequestMessage request)
         {
-            AuthenticationHeaderValue authHeaderValue = request.Headers.Authorization!;
-            string? originalToken = authHeaderValue.Parameter;
-            if (!string.IsNullOrWhiteSpace(originalToken))
-            {
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", "123");
-                request.Headers.TryAddWithoutValidation("X-TestHeader", "TestValue");
-                _logger.LogInformation($"New Token: {request.Headers.Authorization}");
-            }
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", "123");
+            request.Headers.TryAddWithoutValidation("X-TestHeader", "TestValue");
+            _logger.LogInformation($"New Token: {request.Headers.Authorization}");
         }
     }
 }
