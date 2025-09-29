@@ -1,7 +1,6 @@
 {
   "Routes": [
     {
-      "SwaggerKey": "sample",
       "AddClaimsToRequest": {
       },
       "AddHeadersToRequest": {
@@ -165,24 +164,5 @@
       "PollingInterval": 0,
       "Namespace": null
     }
-  },
-  "SwaggerEndPoints": [
-    {
-      "Key": "sample",
-      "VersionPlaceholder": "{version}",
-      "KeyToPath": "sample",
-      "Config": [
-        {
-          "Name": "Sample API",
-          "Version": "v1",
-          "Url": "https://localhost:5001/swagger/v1/swagger.json",
-          "Service": null
-        }
-      ],
-      "HostOverride": null,
-      "TransformByOcelotConfig": true,
-      "RemoveUnusedComponentsFromScheme": false,
-      "TakeServersFromDownstreamService": false
-    }
-  ]
+  }
 }
