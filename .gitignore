@@ -28,7 +28,6 @@ bld/
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 
-/OcelotPrototype/OcelotPrototype.WebApi/ocelot.json
 !/OcelotPrototype/OcelotPrototype.WebApi/Configurations/Debug
 
 # Visual Studio Code configuration directory
