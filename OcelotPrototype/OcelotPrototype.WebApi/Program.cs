@@ -41,7 +41,7 @@ namespace OcelotPrototype.WebApi
             {
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseRouting();
             //app.UseCors();
             app.UseAuthentication();
