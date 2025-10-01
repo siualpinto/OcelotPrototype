@@ -1,0 +1,20 @@
+@HeaderLoggingApp_Http = http://localhost:5185
+@HeaderLoggingApp_Https = https://localhost:7260
+@OcelotPrototypeApp_Http = http://localhost:57004
+@OcelotPrototypeApp_Https = https://localhost:57005
+
+GET {{HeaderLoggingApp_Http}}/weatherforecast/
+Accept: application/json
+###
+
+GET {{HeaderLoggingApp_Https}}/weatherforecast/
+Accept: application/json
+###
+
+GET {{OcelotPrototypeApp_Http}}/weather/
+Accept: application/json
+###
+
+GET {{OcelotPrototypeApp_Https}}/weather/
+Accept: application/json
+###
