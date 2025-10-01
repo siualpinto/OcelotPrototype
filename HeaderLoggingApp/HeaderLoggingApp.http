@@ -1,0 +1,10 @@
+@HeaderLoggingApp_Http = http://localhost:5185
+@HeaderLoggingApp_Https = https://localhost:7260
+
+GET {{HeaderLoggingApp_Http}}/weatherforecast/
+Accept: application/json
+###
+
+GET {{HeaderLoggingApp_Https}}/weatherforecast/
+Accept: application/json
+###
